@@ -97,7 +97,7 @@ app.MapGet("/gabriel/folha/buscar/{cpf}/{mes}/{ano}", ([FromRoute] string cpf, [
     
     if (funcionario == null)
     {
-        return Results.NotFound("Funcionário não encontrado.");
+        return Results.NotFound();
     }
 
     var folha = ctx.Folha
